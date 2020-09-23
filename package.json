@@ -1,0 +1,49 @@
+{
+  "name": "json-code-with-vue",
+  "version": "1.0.0",
+  "description": "json-code-with-vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "./node_modules/.bin/babel src --out-dir dist",
+    "prepublish": "npm run compile",
+    "dev": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tankas/json-code-with-vue.git"
+  },
+  "keywords": [
+    "javascript",
+    "vue"
+  ],
+  "author": "tanka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tankas/json-code-with-vue/issues"
+  },
+  "homepage": "https://github.com/Tankas/json-code-with-vue#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@types/html-webpack-plugin": "^3.2.2",
+    "@types/lodash": "^4.14.149",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "lodash": "^4.17.15",
+    "ts-loader": "^7.0.0",
+    "typescript": "^3.8.3",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2",
+    "webpack-bundle-analyzer": "^3.9.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
