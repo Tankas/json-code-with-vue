@@ -2,13 +2,13 @@
   "name": "json-code-with-vue",
   "version": "1.0.0",
   "description": "json-code-with-vue",
-  "main": "dist/main.js",
+  "main": "lib/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "./node_modules/.bin/babel src --out-dir dist",
+    "compile": "./node_modules/.bin/babel src/index.js --out-dir dist",
     "prepublish": "webpack src/index.js --out-dir dist",
-    "dev": "webpack-dev-server --open",
-    "build": "webpack src/index.js --out-dir dist"
+    "serve": "webpack-dev-server --open",
+    "build": "webpack --config build/webpack.build.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Tankas/json-code-with-vue#readme",
   "dependencies": {
+    "core-js": "^3.6.5",
     "vue": "^2.6.12"
   },
   "devDependencies": {
@@ -37,8 +38,11 @@
     "@types/html-webpack-plugin": "^3.2.2",
     "@types/lodash": "^4.14.149",
     "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^4.5.0",
     "lodash": "^4.17.15",
+    "progress-bar-webpack-plugin": "^2.1.0",
     "ts-loader": "^7.0.0",
     "typescript": "^3.8.3",
     "vue-loader": "^15.7.0",

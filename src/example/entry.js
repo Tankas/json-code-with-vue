@@ -1,3 +1,4 @@
+// import render from '../../lib/main'
 import render from '../index'
 
 console.log(render)

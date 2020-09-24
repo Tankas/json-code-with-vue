@@ -10,11 +10,6 @@ module.exports = {
     entry: './src/example/entry.js',
   },
   mode: 'development',
-  optimization: {
-    splitChunks: {
-      chunks: 'all'
-    }
-  },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,

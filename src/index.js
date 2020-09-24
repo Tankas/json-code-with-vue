@@ -10,4 +10,5 @@ const render = (json, dom) => {
   }
   Jarvis({el: dom, schema })
 }
+
 export default render
