@@ -13,15 +13,14 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'main.js',
     chunkFilename: '[id].js',
-    libraryTarget: 'umd',
-    globalObject: 'this',
     libraryExport: "default",
+    libraryTarget: 'umd',
+    library: 'JSONCODE'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     modules: ['node_modules']
   },
-  // externals: config.externals,
   performance: {
     hints: false
   },
@@ -38,9 +37,6 @@ module.exports = {
         include: process.cwd(),
         exclude: /node_modules|utils\/popper\.js|utils\/date\.js/,
         loader: 'babel-loader',
-        query: {
-          plugins: ['transform-class-properties']
-        }
       },
       {
         test: /\.vue$/,

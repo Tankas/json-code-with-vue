@@ -1,5 +1,11 @@
-// import render from '../../lib/main'
-import render from '../index'
+import render from '../../lib/main'
+
+
+// import * as render from '../../dist/index'
+
+// import render from '../index'
+
+console.log('1122')
 
 console.log(render)
 

@@ -34,14 +34,10 @@ module.exports = {
       },
       {
         test: /\.js?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
+        include: process.cwd(),
+        exclude: /node_modules|utils\/popper\.js|utils\/date\.js/,
+        loader: 'babel-loader',
+      },
     ]
   },
   plugins: [
