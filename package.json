@@ -1,6 +1,6 @@
 {
   "name": "json-code-with-vue",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "json-code-with-vue",
   "main": "lib/main.js",
   "files": [
