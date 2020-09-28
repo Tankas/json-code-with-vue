@@ -1,4 +1,4 @@
-import render from '../../lib/main'
+import render from '../lib/main'
 
 const json = '{"componentName":"div","componentList":[{"componentName":"p","slot":"p1"},{"componentName":"p","slot":"p2"}]}'
 

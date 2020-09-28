@@ -5,8 +5,7 @@
   "main": "lib/main.js",
   "files": [
     "lib",
-    "src",
-    "types"
+    "src"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
