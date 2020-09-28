@@ -11,7 +11,6 @@ const Jarvis = function({ el = null , schema = {}, scope = {}, dataHub = {} }) {
     console.error('el is required')
     return
   }
-  console.log('schema', schema)
 
   // 定义全局变量
   window.__$jarvis = {}
