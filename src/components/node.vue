@@ -1,29 +1,27 @@
 <template>
-  <div class="recursion-wrapper">
-    <component
-      :is="componentObj.componentName"
-      :data="componentObj"
-      v-bind="propObj"
-      :ref="sid"
-      :sid="sid">
-      <slot></slot>
-      <template>
-        <j-recursion
-          v-for="(item, index) in childrenComponentList"
-          :key="index"
-          :componentObj="item"
-          :sid="sid"
-          :scope="scope"
-        >
-        {{ item.slot }}
-        </j-recursion>
-      </template>
-    </component>
-  </div>
+  <component
+    :is="componentObj.componentName"
+    :data="componentObj"
+    v-bind="propObj"
+    :ref="sid"
+    :sid="sid">
+    <slot></slot>
+    <template>
+      <node
+        v-for="(item, index) in childrenComponentList"
+        :key="index"
+        :componentObj="item"
+        :sid="sid"
+        :scope="scope"
+      >
+      {{ item.slot }}
+      </node>
+    </template>
+  </component>
 </template>
 <script>
 export default {
-  name: 'j-recursion',
+  name: 'node',
   data() {
     return {
     }

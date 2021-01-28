@@ -1,6 +1,6 @@
 import Jarvis from './render'
 
-const render = (json, dom) => {
+const render = (json, dom, Vue) => {
   let schema = {}
   try {
     schema = JSON.parse(json)
@@ -8,7 +8,7 @@ const render = (json, dom) => {
     console.log(err)
     schema = {}
   }
-  Jarvis({el: dom, schema })
+  Jarvis({el: dom, schema, Vue })
 }
 
 

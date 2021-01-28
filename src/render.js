@@ -1,11 +1,8 @@
-import Vue from 'vue'
 import Main from './main.vue'
-
-// let Constructor = Vue.extend(Main)
 
 let instance
 
-const Jarvis = function({ el = null , schema = {}, scope = {}, dataHub = {} }) {
+const Jarvis = function({ el = null , schema = {}, Vue }) {
   if (Vue.prototype.$isServer) return
   if (!el) {
     console.error('el is required')
@@ -18,7 +15,7 @@ const Jarvis = function({ el = null , schema = {}, scope = {}, dataHub = {} }) {
   
   let Constructor = Vue.extend(Main)
   instance = new Constructor({
-    data: {schema, scope, dataHub},
+    data: {schema},
   })
   instance.$mount()
   el.appendChild(instance.$el)

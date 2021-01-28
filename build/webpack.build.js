@@ -15,7 +15,7 @@ module.exports = {
     chunkFilename: '[id].js',
     libraryExport: "default",
     libraryTarget: 'umd',
-    library: 'JSONCODE'
+    // library: 'JSONCODE'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],

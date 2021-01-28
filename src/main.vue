@@ -1,10 +1,10 @@
 <template>
   <div class="main-wrapper">
-    <j-recursion :componentObj="schema" :sid="sid" :scope="scope"></j-recursion>
+    <node :componentObj="schema" :sid="sid" :scope="scope"></node>
   </div>
 </template>
 <script>
-import JRecursion from './components/recursion'
+import Node from './components/node'
 
 import { random } from './utils/tools'
 
@@ -13,7 +13,7 @@ import { random } from './utils/tools'
 export default {
   name: 'Jarvis',
   components: {
-    JRecursion,
+    Node,
   },
   data() {
     return {
@@ -24,16 +24,6 @@ export default {
     console.log(this.schema)
   },
   methods: {
-    initDateHub() {
-      const dataHubList = Object.keys(this.dataHub)
-      if (!dataHubList) return
-      dataHubList.forEach((i) => {
-        this.$store.dispatch('dataHubSet', {
-          path: i,
-          val: this.dataHub[i],
-        })
-      })
-    },
   },
 }
 </script>

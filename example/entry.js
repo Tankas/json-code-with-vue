@@ -1,5 +1,17 @@
-import render from '../lib/main'
+// import render from '../lib/main'
+import render from '../src'
+import Vue from 'vue'
 
-const json = '{"componentName":"div","componentList":[{"componentName":"p","slot":"p1"},{"componentName":"p","slot":"p2"}]}'
+console.log('vue instance')
+console.log(Vue)
 
-render(json, document.getElementById('#app'))
+import test from './test.vue'
+
+Vue.component(
+  test.name,
+  test,
+)
+
+const json = '{"componentName":"div","componentList":[{"componentName":"p","slot":"p1"},{"componentName":"test"}]}'
+
+render(json, document.getElementById('#app'), Vue)
